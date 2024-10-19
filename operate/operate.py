@@ -64,7 +64,7 @@ def main(model, terminal_prompt, voice_mode=False, verbose_mode=False):
     # Skip message dialog if prompt was given directly
     if not terminal_prompt:
         message_dialog(
-            title="Self-Operating Computer",
+            title="AI-agent-customer-support",
             text="An experimental framework to enable multimodal models to operate computers",
             style=style,
         ).run()
@@ -82,7 +82,7 @@ def main(model, terminal_prompt, voice_mode=False, verbose_mode=False):
         objective = terminal_prompt
     elif voice_mode:
         print(
-            f"{ANSI_GREEN}[Self-Operating Computer]{ANSI_RESET} Listening for your command... (speak now)"
+            f"{ANSI_GREEN}[AI-agent-customer-support]{ANSI_RESET} Listening for your command... (speak now)"
         )
         try:
             objective = mic.listen()
@@ -91,7 +91,7 @@ def main(model, terminal_prompt, voice_mode=False, verbose_mode=False):
             return  # Exit if voice input fails
     else:
         print(
-            f"[{ANSI_GREEN}Self-Operating Computer {ANSI_RESET}|{ANSI_BRIGHT_MAGENTA} {model}{ANSI_RESET}]\n{USER_QUESTION}"
+            f"[{ANSI_GREEN}AI-agent-customer-support {ANSI_RESET}|{ANSI_BRIGHT_MAGENTA} {model}{ANSI_RESET}]\n{USER_QUESTION}"
         )
         print(f"{ANSI_YELLOW}[User]{ANSI_RESET}")
         objective = prompt(style=style)
