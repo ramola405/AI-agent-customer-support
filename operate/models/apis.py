@@ -38,8 +38,8 @@ config = Config()
 
 async def get_next_action(model, messages, objective, session_id):
     if config.verbose:
-        print("[Self-Operating Computer][get_next_action]")
-        print("[Self-Operating Computer][get_next_action] model", model)
+        print("[AI Agent Support][get_next_action]")
+        print("[AI Agent Support][get_next_action] model", model)
     if model == "gpt-4":
         return call_gpt_4o(messages), None
     if model == "gpt-4-with-som":
