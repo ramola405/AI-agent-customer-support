@@ -9,8 +9,8 @@ with open("README.md", "r", encoding="utf-8") as readme_file:
     long_description = readme_file.read()
 
 setup(
-    name="AI-agent-customer-support",
-    version="1.4.6",
+    name="AI-agent-support",
+    version="1 ",
     packages=find_packages(),
     install_requires=required,  # Add dependencies here
     entry_points={
